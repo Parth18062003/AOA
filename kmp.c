@@ -69,3 +69,35 @@ int main()
     KMP(pat, txt);
     return 0;
 }
+
+/*Compute_Prefix_Function(P)
+{  
+    m := P.length
+    let Pi[1...m] be new array
+    Pi[1] = 0;
+    k = o;
+    for q = 2 to m 
+        while k > 0 and P[k+1] != P[q]
+            k = Pi[k];
+        if P[k+1] == P[q]
+            k = k + 1;
+        Pi[q] = k
+    return Pi
+}
+
+KMP(T,P)
+{  
+    n := T.length;
+    m := P.length;
+    Pi = Comput_Preefix_Function(P);
+    q = 0;
+    for i := 1 to n do
+        while q > 0 and P[q+1] != T[i]
+            q = Pi[q]
+        if P[q+1] == T[i]
+            q = q + 1;
+        if q == m
+            write Pattern occurs with shift i-m
+            q = Pi[q]
+}            
+            
