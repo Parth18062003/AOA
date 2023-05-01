@@ -78,4 +78,4 @@ Place(k,i)
            or (Abs(x[j]-i) = Abs(j-k))) //same diagonal
            then return false;
     return true;
-}    
+}*/
