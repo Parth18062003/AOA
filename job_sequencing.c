@@ -54,3 +54,20 @@ int main() {
     printJobSequence(jobs, deadlines, profits, n);
     return 0;
 }
+
+/*Job_Sequencing(D, J, n, k)
+{
+    D(0) := J(0) := 0
+    k := 1
+    J(1) := 1 //first job is selected
+    for i := 2 to n do
+        r := k
+        while D(J(r)) < D(i) and D(J(r)) != r do
+            r := r - 1;
+        if D(J(r)) > D(i) and D(i) > r then
+            for l = k to r + 1 by - 1 do
+                J(l+1) := i
+                J(r+1) := i
+                k := k +1
+}*/                
+                
