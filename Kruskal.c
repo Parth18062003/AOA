@@ -76,3 +76,24 @@ int main()
 
     return 0;
 }
+
+/*Kruskal(E, cost, n, t)
+// E is set of edges in G. G has n vertices cost[u,v] is cost of edge(u,v). t is set of edges in mst
+{
+    for i := 1 to n do
+        parent[i] := -1;
+    i := 0, mincost := 0
+    while(i < n-1) and heap not empty do
+    {
+        delete a min_cost_edge(u,v) from heap and heapify using Adjust
+        j := find(u), k = find(v)
+        if(j != k) then
+        {
+            i := i + 1
+            t[i,1] := u, t[1,2] :=v
+            mincost := mincost + cost[u,v]
+            union(j,k)
+        }
+        if (i != n-1) then write No spanning tree
+        else return mincost;
+}*/
