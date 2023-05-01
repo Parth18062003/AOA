@@ -59,7 +59,4 @@ int main() {
             return i;
         mod P := mod(s[i+1.....i+m], q)
     return not found;
-}    
-
-
-
+}*/    
