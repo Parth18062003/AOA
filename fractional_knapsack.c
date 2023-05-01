@@ -71,3 +71,25 @@ int main() {
 
     return 0;
 }
+
+
+/*fractionalKnapsack(weights[], values[], n, capacity)
+    for i from 0 to n-1 do
+        ratios[i] = values[i] / weights[i]  // calculate value-to-weight ratio for each item
+    end for
+    sort items by ratios in decreasing order // sort items by value-to-weight ratio
+    totalValue = 0
+    i = 0
+    while (capacity > 0 and i < n) do
+        if (weights[i] <= capacity) then  // if item fits completely, add it
+            totalValue += values[i]
+            capacity -= weights[i]
+        else  // if item doesn't fit completely, add a fraction of it
+            fraction = capacity / weights[i]
+            totalValue += fraction * values[i]
+            capacity = 0
+        end if
+        i++
+    end while
+    return totalValue
+end function*/
