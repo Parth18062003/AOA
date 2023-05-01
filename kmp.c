@@ -99,5 +99,4 @@ KMP(T,P)
         if q == m
             write Pattern occurs with shift i-m
             q = Pi[q]
-}            
-            
+}*/                
