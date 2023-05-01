@@ -73,5 +73,4 @@ int main() {
                 c[i,j] := c[i,j-1]
                 b[i,j] := "L"
     return c and b;
-}    
-        
+}*/    
