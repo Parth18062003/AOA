@@ -53,3 +53,25 @@ int main() {
   printf("\n");  
 }
 
+/*LCS(x,y)
+{
+    m <- length[x]
+    n <- length[y]
+    for i := i to m do
+        c[i,0] := 0
+    for j := 1 to n do
+        c[0,j] := 0
+    for i := i to m do
+        for j := 1 to n do
+            if xi = yj
+                c[i,j] := c[i-1,j-1] + 1
+                b[i,j] := "D"
+            else if c[i-j,j] > c[i,j-1]
+                c[i,j] := c[i-1,j]
+                b[i,j] := "U"
+            else
+                c[i,j] := c[i,j-1]
+                b[i,j] := "L"
+    return c and b;
+}    
+        
