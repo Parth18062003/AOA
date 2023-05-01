@@ -49,7 +49,17 @@ int main() {
   rabinKarp(pattern, text, q);
 }
 
-
+/*Rabin_Karp(T[0...(n-1)],P[0.....(m-1)])
+{
+    mod T := mod(T[0....(m-1)], q);
+    mod P := mod(P[0....(n-1)], q);
+    for i := 1 to n-m+1
+        if mod P = mod T
+            if T[i....i+m-1] = P
+            return i;
+        mod P := mod(s[i+1.....i+m], q)
+    return not found;
+}    
 
 
 
