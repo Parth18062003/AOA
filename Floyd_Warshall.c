@@ -62,3 +62,16 @@ int main()
 
     return 0;
 }
+
+/*Floyd_Warshall(cost, a, n)
+cost[1:n,1:n] is cost adjacency matrix of graph of n vertices
+a[i,j] is cost of shortest path
+{
+    for i := 1 to n do
+        for j := 1 to n do
+            a[i,j] := cost[i,j];
+    for k := 1 to n do
+        for i := 1 to n do
+            for j := 1 to n do
+                a[i,j] := min(a[i,j], a[i,k]+a[k,j]);
+}*/                
