@@ -58,3 +58,24 @@ void queen(int row,int n)
         }
     }
 }
+
+/*N_Queens(k,n)
+{
+    for i := 1 to n do
+    {
+        if Place(k,i) then
+            x[k] := i;
+            if (k = n) then write (x[1:n]);
+            else N_Queens(k+1,n);
+     }
+}
+
+Place(k,i)
+//Returns true if queen can be placed in kth row and ith column
+{
+    for j := 1 to k-1 do
+        if((x[j] = i) //in same column
+           or (Abs(x[j]-i) = Abs(j-k))) //same diagonal
+           then return false;
+    return true;
+}    
