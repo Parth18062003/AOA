@@ -63,3 +63,33 @@ int main()
 
     return 0;
 }
+
+/*function primMST(graph):
+    parent[V]   // Array to store constructed MST
+    key[V]      // Key values used to pick minimum weight edge in cut
+    mstSet[V]   // To represent set of vertices not yet included in MST
+    
+    for each vertex v in graph:
+        key[v] = infinity
+        mstSet[v] = false
+    
+    // Always include first vertex in MST.
+    key[0] = 0    
+    parent[0] = -1   // First node is always root of MST
+
+    for i = 0 to V-1:
+        // Pick the minimum key vertex from the set of vertices not yet
+        // included in MST
+        u = vertex in mstSet with minimum key value
+
+        mstSet[u] = true  // Add the picked vertex to the MST Set
+
+        // Update key value and parent index of the adjacent vertices of
+        // the picked vertex. Consider only those vertices which are not yet
+        // included in MST
+        for each adjacent vertex v of u:
+            if graph[u][v] is not 0 and mstSet[v] is false and graph[u][v] < key[v]:
+                parent[v] = u
+                key[v] = graph[u][v]
+    
+    printMST(parent, graph) // print the constructed MST*/
