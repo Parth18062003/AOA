@@ -51,3 +51,19 @@ int main() {
     printf("\nMinimum cost is %d\n", total_cost);
     return 0;
 }
+
+/*1. Let V be the set of nodes in the graph, and let S be a subset of V that contains the starting node s.
+2. Let C(S, i) be the cost of the shortest path that starts at node s, visits all nodes in S exactly once, and ends at node i.
+3. Initialize C({s}, s) to 0 and C(S, i) to infinity for all other S and i.
+4. For each subset S of V that contains s, and for each node i in S other than s:
+     a. For each node j in S other than i and s:
+          i. Compute C(S-{i}, j) + cost(j, i), where cost(j, i) is the cost of going from node j to node i.
+          ii. If C(S-{i}, j) + cost(j, i) is less than C(S, i), update C(S, i) to this value.
+5. Let p be an empty list of nodes, and let S be the set of all nodes in the graph.
+6. Let i = s.
+7. While S is not empty:
+     a. Add i to the beginning of p.
+     b. Let S = S - {i}.
+     c. Let i be the node in S that minimizes C(S, j) + cost(i, j), where j is the current value of i.
+8. Add s to the beginning of p.
+9. Return p, which is the optimal TSP tour.*/
